@@ -12,7 +12,7 @@ public class java_substring {
         int start = in.nextInt();
         int end = in.nextInt();
 
-        String substring = S.substring(start, end + 1);
+        String substring = S.substring(start, end);
         System.out.println(substring);
 
 

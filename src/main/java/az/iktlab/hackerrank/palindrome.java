@@ -15,7 +15,8 @@ public class palindrome {
         String reversedStr = new StringBuilder(str).reverse().toString();
         if (str.equals(reversedStr)) {
             return "Yes";
-        } else {
+        }
+        else {
             return "No";
         }
     }
