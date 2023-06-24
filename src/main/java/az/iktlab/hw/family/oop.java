@@ -36,11 +36,6 @@ class oop_sub {
         this.tricklevel = tricklevel;
         this.habits = habits;
     }
-
-    public oop_sub() {
-        // Empty constructor
-    }
-
     public void run() {
         System.out.printf("oop_sub: %s is running\n", nickname);
     }
