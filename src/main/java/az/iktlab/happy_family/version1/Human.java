@@ -45,6 +45,7 @@ public class Human {
         System.out.printf("I have a %s, he is %s years old, he is %s\n", pet.species, pet.age, slyness);
     }
 
+    //Override by chatGPT for correct work of schedule
     @Override
     public String toString() {
         StringBuilder scheduleStr = new StringBuilder();
@@ -53,7 +54,7 @@ public class Human {
                 scheduleStr.append(day[0]).append(": ").append(day[1]).append(", ");
             }
             if (scheduleStr.length() > 0) {
-                scheduleStr.setLength(scheduleStr.length() - 2); // Remove the trailing comma and space
+                scheduleStr.setLength(scheduleStr.length() - 2);
             }
         }
 
