@@ -1,4 +1,4 @@
-package az.iktlab.hw.family;
+package az.iktlab.hw.family.fail;
 
 import java.util.Arrays;
 
