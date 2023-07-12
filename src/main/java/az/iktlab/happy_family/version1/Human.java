@@ -40,10 +40,42 @@ public class Human {
         System.out.printf("Hello, %s\n", pet.nickname);
     }
 
-    public void describePet() {
-        String slyness = (pet.trickLevel >= 50) ? "very sly" : "almost not sly";
-        System.out.printf("I have a %s, he is %s years old, he is %s\n", pet.species, pet.age, slyness);
+//    public void describePet() {
+////        String slyness = (pet.trickLevel >= 50) ? "very sly" : "almost not sly";
+//        String slyness;
+//        if (pet.trickLevel >= 50){
+//            slyness = "very sly";
+//        } else {
+//            slyness = "almost not sly";
+//        }
+//        System.out.printf("I have a %s, he is %s years old, he is %s\n", pet.species, pet.age, slyness);
+//    }
+public void describePet() {
+    String slyness;
+    switch (pet.trickLevel) {
+        case 50:
+        case 49:
+        case 48:
+        case 47:
+        case 46:
+        case 45:
+        case 44:
+        case 43:
+        case 42:
+        case 41:
+        case 40:
+        case 39:
+        case 38:
+        case 37:
+        case 36:
+            slyness = "very sly";
+            break;
+        default:
+            slyness = "almost not sly";
     }
+    System.out.printf("I have a %s, he is %s years old, he is %s\n", pet.species, pet.age, slyness);
+}
+
 
     //Override by chatGPT for correct work of schedule
     @Override
