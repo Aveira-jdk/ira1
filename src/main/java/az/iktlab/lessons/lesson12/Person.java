@@ -1,4 +1,4 @@
-package az.iktlab.lessons.lesson12;
+package az.iktlab.javasiplessons.lesson12;
 
 public class Person {
 
