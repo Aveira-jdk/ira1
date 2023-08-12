@@ -13,16 +13,18 @@ public class Main {
         String jsonFilePath = "C:\\Java-Projects\\ira1\\docs\\people.json";
         List<Person> peopleList;
 
-        try (var reader = new BufferedReader(new FileReader(jsonFilePath))) {
+        try {
+            try (var reader = new BufferedReader(new FileReader(jsonFilePath))) {
 
-            String jsonString = reader.lines().collect(Collectors.joining());
-            jsonString = jsonString.substring(1, jsonString.length() - 1);
+                String jsonString = reader.lines().collect(Collectors.joining());
+                jsonString = jsonString.substring(1, jsonString.length() - 1);
 
-            String[] personStrings;
-            personStrings = jsonString.split("\\},\\s*\\{");
+                String[] personStrings;
+                personStrings = jsonString.split("\\},\\s*\\{");
 
-            peopleList = Arrays.stream(personStrings).map(personString -> Person.fromJsonString("{" + personString + "}")).collect(Collectors.toList());
-            peopleList.forEach(System.out::println);
+                peopleList = Arrays.stream(personStrings).map(personString -> Person.fromJsonString("{" + personString + "}")).collect(Collectors.toList());
+                peopleList.forEach(System.out::println);
+            }
         }
 
         catch (IOException e) {

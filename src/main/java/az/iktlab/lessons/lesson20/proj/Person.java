@@ -30,7 +30,7 @@ public class Person {
 
         String gender;
         gender = parts[3].split(":")[1].replace("\"", "");
-        
+
         String birthDate;
         birthDate = parts[4].split(":")[1].replace("\"", "");
 
