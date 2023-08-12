@@ -13,8 +13,10 @@ public class Main {
 
         DayOfWeekE day = DayOfWeekE.MONDAY;
 
-        if (day == DayOfWeekE.MONDAY) {
-            System.out.println(DayOfWeekE.MONDAY.getDescription());
+        if (day instanceof DayOfWeekE) {
+            System.out.println(((DayOfWeekE) day).getDescription());
+        } else {
+            System.out.println("Invalid day");
         }
 
     }

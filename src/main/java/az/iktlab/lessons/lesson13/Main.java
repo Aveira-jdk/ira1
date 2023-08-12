@@ -1,4 +1,4 @@
-package az.iktlab.lessons.lesson13;
+package az.iktlab.javasiplessons.lesson13;
 
 public class Main {
 

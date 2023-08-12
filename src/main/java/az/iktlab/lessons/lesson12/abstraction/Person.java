@@ -13,11 +13,11 @@ public class Person extends Human {
     }
 
     public void write() {
-        System.out.println("Person write");
+        System.out.println("Main write");
     }
 
     @Override
     public void run() {
-        System.out.println("Person run function");
+        System.out.println("Main run function");
     }
 }

@@ -1,4 +1,4 @@
-package az.iktlab.javasiplessons.lesson14.gc;
+package az.iktlab.lessons.lesson14.gc;
 
 public class Human {
 
