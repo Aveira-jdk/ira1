@@ -20,11 +20,19 @@ public class Person {
         jsonString = jsonString.substring(1, jsonString.length() - 1);
         String[] parts = jsonString.split(",\\s*");
 
-        String name = parts[0].split(":")[1].replace("\"", "");
-        String surname = parts[1].split(":")[1].replace("\"", "");
+        String name;
+        name = parts[0].split(":")[1].replace("\"", "");
+
+        String surname;
+        surname = parts[1].split(":")[1].replace("\"", "");
+
         int age = Integer.parseInt(parts[2].split(":")[1].trim());
-        String gender = parts[3].split(":")[1].replace("\"", "");
-        String birthDate = parts[4].split(":")[1].replace("\"", "");
+
+        String gender;
+        gender = parts[3].split(":")[1].replace("\"", "");
+        
+        String birthDate;
+        birthDate = parts[4].split(":")[1].replace("\"", "");
 
         return new Person(name, surname, age, gender, birthDate);
     }
