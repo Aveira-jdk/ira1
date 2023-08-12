@@ -13,7 +13,7 @@ public class Main {
         String jsonFilePath = "C:\\Java-Projects\\ira1\\docs\\people.json";
         List<Person> peopleList;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader(jsonFilePath))) {
+        try (var reader = new BufferedReader(new FileReader(jsonFilePath))) {
             String jsonContent;
             jsonContent = reader.lines().collect(Collectors.joining());
 
