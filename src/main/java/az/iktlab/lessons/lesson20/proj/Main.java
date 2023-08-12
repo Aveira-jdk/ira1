@@ -14,13 +14,10 @@ public class Main {
         List<Person> peopleList;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(jsonFilePath))) {
-            StringBuilder jsonContent = new StringBuilder();
-            String line;
-            while ((line = reader.readLine()) != null) {
-                jsonContent.append(line);
-            }
+            String jsonContent;
+            jsonContent = reader.lines().collect(Collectors.joining());
 
-            String jsonString = jsonContent.toString();
+            String jsonString = jsonContent;
             jsonString = jsonString.substring(1, jsonString.length() - 1);
 
             String[] personStrings = jsonString.split("\\},\\s*\\{");
