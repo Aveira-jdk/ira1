@@ -1,5 +1,12 @@
 [
   {
+    "name": "Phone",
+    "surname": "Phone",
+    "age": 28,
+    "gender": "Male",
+    "birthDate": "1995-04-15"
+  },
+  {
     "name": "John",
     "surname": "Doe",
     "age": 28,
