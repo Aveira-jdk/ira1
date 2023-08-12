@@ -3,14 +3,15 @@ package az.iktlab.lessons.lesson20.proj;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
     public static void main(String[] args) {
         String jsonFilePath = "C:\\Java-Projects\\ira1\\docs\\people.json";
-        List<Person> peopleList = new ArrayList<>();
+        List<Person> peopleList;
 
         try (BufferedReader reader = new BufferedReader(new FileReader(jsonFilePath))) {
             StringBuilder jsonContent = new StringBuilder();
@@ -24,15 +25,11 @@ public class Main {
 
             String[] personStrings = jsonString.split("\\},\\s*\\{");
 
-            for (String personString : personStrings) {
-                Person person = Person.fromJsonString("{" + personString + "}");
-                peopleList.add(person);
-            }
+            peopleList = Arrays.stream(personStrings).map(personString -> Person.fromJsonString("{" + personString + "}")).collect(Collectors.toList());
+            peopleList.forEach(System.out::println);
+        }
 
-            for (Person person : peopleList) {
-                System.out.println(person);
-            }
-        } catch (IOException e) {
+        catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
